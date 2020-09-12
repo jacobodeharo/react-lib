@@ -9,6 +9,7 @@
     "pretty:fix": "prettier --write './**/*.{js,jsx,mjs,ts,tsx,css,scss,md,html}'",
     "pretty:check": "prettier --check './**/*.{js,jsx,mjs,ts,tsx,css,scss,md,html}'",
     "test:lint": "eslint --ext .jsx,.js,.ts,.tsx .",
+    "build:link": "npm run build && cd build && npm link --prod",
     "clean": "npm run clean:build",
     "clean:build": "rm -rf ./build",
     "clean:npm": "rm -rf ./node_modules && npm cache verify",
