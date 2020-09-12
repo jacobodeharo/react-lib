@@ -1,4 +1,14 @@
+# NPM
+npm-debug.log*
+npm-error.log*
 node_modules/
+
+# misc
+.DS_Store
+
+# IDE
+.idea/
+
+# App
 build/
 dist/
-.idea/
