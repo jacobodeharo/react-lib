@@ -1,6 +1,4 @@
 # NPM
-npm-debug.log*
-npm-error.log*
 node_modules/
 
 # misc
@@ -12,3 +10,5 @@ node_modules/
 # App
 build/
 dist/
+
+*.log
