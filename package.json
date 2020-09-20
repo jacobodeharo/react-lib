@@ -17,7 +17,9 @@
     "clean": "npm run clean:build",
     "clean:build": "rm -rf ./build",
     "clean:npm": "rm -rf ./node_modules && npm cache verify",
-    "clean:all": "cli-confirm \"Removing node_modules and build directories... Proceed? (y/n)\" && run-s clean:build clean:npm"
+    "clean:all": "cli-confirm \"Removing node_modules and build directories... Proceed? (y/n)\" && run-s clean:build clean:npm",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "author": "Jacobo de Haro",
   "license": "UNLICENSED",
@@ -29,6 +31,10 @@
     "@babel/core": "~7.11.6",
     "@rollup/plugin-commonjs": "~15.0.0",
     "@rollup/plugin-node-resolve": "~9.0.0",
+    "@storybook/addon-actions": "^6.0.21",
+    "@storybook/addon-essentials": "^6.0.21",
+    "@storybook/addon-links": "^6.0.21",
+    "@storybook/react": "^6.0.21",
     "@testing-library/jest-dom": "~5.11.4",
     "@testing-library/react": "~11.0.2",
     "@types/jest": "~26.0.13",
@@ -56,6 +62,7 @@
     "node-sass": "~4.14.1",
     "npm-run-all": "^4.1.5",
     "prettier": "~2.1.1",
+    "react-is": "^16.13.1",
     "react": "~16.13.1",
     "react-dom": "~16.13.1",
     "rollup": "~2.26.11",
@@ -70,5 +77,6 @@
   "files": [
     "build"
   ],
-  "types": "build/index.d.ts"
+  "types": "build/index.d.ts",
+  "dependencies": {}
 }
