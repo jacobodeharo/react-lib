@@ -12,7 +12,7 @@
     "test:lint:fix": "eslint --fix --ext .jsx,.js,.ts,.tsx .",
     "test:unit": "jest",
     "test:unit:watch": "jest --watch",
-    "test": "run-s test:lint test:unit",
+    "test": "run-s test:lint:fix test:unit",
     "build:link": "npm run build && cd build && npm link --prod",
     "clean": "npm run clean:build",
     "clean:build": "rm -rf ./build",
