@@ -1,7 +1,7 @@
-import React, { PureComponent } from 'react';
+import * as React from 'react';
 import { ErrorBoundaryProps, ErrorBoundaryState } from './ErrorBoundary.types';
 
-class ErrorBoundary extends PureComponent<
+export class ErrorBoundary extends React.PureComponent<
   ErrorBoundaryProps,
   ErrorBoundaryState
 > {
@@ -31,5 +31,3 @@ class ErrorBoundary extends PureComponent<
     return this.props.children;
   }
 }
-
-export default ErrorBoundary;
