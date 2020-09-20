@@ -6,7 +6,7 @@ import { ThemeProvider } from '../theme';
 import { availableThemes } from '../theme/variants';
 
 export default {
-  title: 'Components/Anchor',
+  title: 'Components/Base/Anchor',
   component: Anchor,
   argTypes: {
     label: { control: 'text' },

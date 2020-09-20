@@ -6,7 +6,7 @@ import { ThemeProvider } from '../theme';
 import { availableThemes } from '../theme/variants';
 
 export default {
-  title: 'Components/Button',
+  title: 'Components/Base/Button',
   component: Button,
   argTypes: {
     label: { control: 'text' },
