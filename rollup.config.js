@@ -1,4 +1,3 @@
-import copy from 'rollup-plugin-copy';
 import commonjs from '@rollup/plugin-commonjs';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
@@ -38,19 +37,5 @@ export default {
       ],
     }),
     postcss(),
-    copy({
-      targets: [
-        {
-          src: 'src/typography.scss',
-          dest: 'build',
-          rename: 'typography.scss',
-        },
-        {
-          src: 'src/variables.scss',
-          dest: 'build',
-          rename: 'variables.scss',
-        },
-      ],
-    }),
   ],
 };
