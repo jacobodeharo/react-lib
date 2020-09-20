@@ -17,7 +17,7 @@
     "test": "run-s test:lint:fix test:unit",
     "build:link": "npm run build && cd build && npm link --prod",
     "clean": "npm run clean:build",
-    "clean:build": "rm -rf ./build",
+    "clean:build": "rm -rf ./build && rm -rf coverage",
     "clean:npm": "rm -rf ./node_modules && npm cache verify",
     "clean:all": "cli-confirm \"Removing node_modules and build directories... Proceed? (y/n)\" && run-s clean:build clean:npm",
     "storybook": "start-storybook -p 6006",
