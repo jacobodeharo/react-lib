@@ -2,5 +2,7 @@ build/
 dist/
 lib/
 node_modules/
-.snapshots/
+coverage/
+test-coverage/
+*.snap
 *.min.js

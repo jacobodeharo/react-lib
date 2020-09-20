@@ -11,4 +11,9 @@ node_modules/
 build/
 dist/
 
+# Logs
 *.log
+
+# Coverage reports
+/coverage/
+/test-coverage/
