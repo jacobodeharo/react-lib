@@ -25,7 +25,8 @@
   },
   "plugins": [
     "@typescript-eslint",
-    "react-hooks"
+    "react-hooks",
+    "better-styled-components"
   ],
   "rules": {
     "space-before-function-paren": 0,
@@ -36,7 +37,9 @@
     "import/export": 0,
     "no-use-before-define": [0],
     "@typescript-eslint/no-use-before-define": [1],
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    "react-hooks/rules-of-hooks": "warn",
+    "react-hooks/exhaustive-deps": "warn",
+    "better-styled-components/sort-declarations-alphabetically": 2,
+    "no-unused-vars": "warn"
   }
 }

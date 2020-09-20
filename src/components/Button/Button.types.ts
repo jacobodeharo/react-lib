@@ -1,3 +1,5 @@
-export interface ButtonProps {
-  text: string;
-}
+import { ComponentProps } from 'react';
+
+export type ButtonProps = ComponentProps<'button'> & {
+  theme: string;
+};

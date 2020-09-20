@@ -7,6 +7,10 @@ import typescript from 'rollup-plugin-typescript2';
 
 const packageJson = require('./package.json');
 
+const createStyledComponentsTransformer = require('typescript-plugin-styled-components')
+  .default;
+const styledComponentsTransformer = createStyledComponentsTransformer();
+
 export default {
   input: 'src/index.ts',
   output: [
@@ -25,7 +29,14 @@ export default {
     peerDepsExternal(),
     resolve(),
     commonjs(),
-    typescript({ useTsconfigDeclarationDir: true }),
+    typescript({
+      useTsconfigDeclarationDir: true,
+      transformers: [
+        () => ({
+          before: [styledComponentsTransformer],
+        }),
+      ],
+    }),
     postcss(),
     copy({
       targets: [

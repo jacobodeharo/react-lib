@@ -7,12 +7,12 @@ class ErrorBoundary extends PureComponent<
 > {
   static readonly DEFAULT_FALLBACK_TEXT = 'Something went wrong.';
 
-  constructor(props) {
+  constructor(props: Readonly<ErrorBoundaryProps>) {
     super(props);
     this.state = { hasError: false, error: null };
   }
 
-  componentDidCatch(error, info) {
+  componentDidCatch(error: any) {
     this.setState({ hasError: true, error: error });
   }
 
