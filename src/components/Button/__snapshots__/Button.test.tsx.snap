@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button has to accept theming 1`] = `
+<button
+  class="sc-bdnylx jgaHVl"
+>
+  Button Label
+</button>
+`;
+
+exports[`Button has to be rendered 1`] = `
+<button
+  class="sc-bdnylx Hvhxi"
+>
+  Button Label
+</button>
+`;
