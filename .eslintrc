@@ -3,9 +3,8 @@
   "extends": [
     "standard",
     "standard-react",
-    "plugin:prettier/recommended",
-    "prettier/standard",
     "prettier/react",
+    "plugin:prettier/recommended",
     "plugin:@typescript-eslint/eslint-recommended"
   ],
   "env": {
@@ -24,6 +23,7 @@
     }
   },
   "plugins": [
+    "prettier",
     "@typescript-eslint",
     "react-hooks",
     "better-styled-components"

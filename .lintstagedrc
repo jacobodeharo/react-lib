@@ -1,3 +1,4 @@
 {
-    "*.{js,jsx,mjs,ts,tsx,scss,css,md,mdx,html}": "prettier --write './**/*.{js,jsx,mjs,ts,tsx,css,scss,md,mdx,html}'"
+    "*.{js,jsx,mjs,ts,tsx}": "eslint --fix --ext ",
+    "*.{scss,css,md,mdx,html,json}": "pretty-quick --staged"
 }
