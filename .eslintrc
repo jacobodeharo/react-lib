@@ -39,7 +39,6 @@
     "@typescript-eslint/no-use-before-define": [1],
     "react-hooks/rules-of-hooks": "warn",
     "react-hooks/exhaustive-deps": "warn",
-    "better-styled-components/sort-declarations-alphabetically": 2,
     "no-unused-vars": "warn"
   }
 }
