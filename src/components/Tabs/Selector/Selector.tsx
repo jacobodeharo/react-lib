@@ -1,6 +1,7 @@
 import React from 'react';
 import { SelectorProps } from './Selector.types';
 import { useTabs } from '../Tabs.hooks';
+import { StyledSelector } from './Selector.styles';
 
 const Selector: React.FC<SelectorProps> = (props) => {
   const { setActiveTab } = useTabs();
@@ -9,9 +10,9 @@ const Selector: React.FC<SelectorProps> = (props) => {
     setActiveTab(tabId);
   };
   return (
-    <div className='tab' onClick={clickHandler}>
+    <StyledSelector onClick={clickHandler} {...props}>
       {children}
-    </div>
+    </StyledSelector>
   );
 };
 
