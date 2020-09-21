@@ -3,4 +3,6 @@ export type TTabsContext = {
   setActiveTab: (id: string) => void;
 };
 
-export type TabsProps = {};
+export type TabsProps = {
+  selectedTab: string;
+};

@@ -33,7 +33,7 @@ type StoryTabsProps = TabsProps & {
 const Template: Story<StoryTabsProps> = (args) => {
   return (
     <ThemeProvider theme={availableThemes[args.themeName]}>
-      <Tabs>
+      <Tabs selectedTab='Tab A'>
         <Selector tabId='Tab A'>Tab A</Selector>
         <Selector tabId='Tab B'>Tab B</Selector>
         <Selector tabId='Tab C'>Tab C</Selector>
