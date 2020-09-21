@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, cleanup, screen } from '@testing-library/react';
 import { Selector } from './Selector';
-import { DARK_THEME } from '../../theme/variants/darkTheme';
+import { AMBER_THEME } from '../../theme/variants/amberTheme';
 import { consoleLogSpy } from '../../../helper/testHelper';
 import { ErrorBoundary } from '../../..';
 import { TabsContext } from '../Tabs.context';
@@ -45,7 +45,7 @@ describe('Selector', () => {
           setActiveTab: (_: string) => undefined,
         }}
       >
-        <Selector tabId='tabA' theme={DARK_THEME}>
+        <Selector tabId='tabA' theme={AMBER_THEME}>
           {SELECTOR_CHILDREN}
         </Selector>
       </TabsContext.Provider>
@@ -61,12 +61,12 @@ describe('Selector', () => {
       setActiveTab: (_: string) => undefined,
     };
     const tabIdFixture = 'tabA';
-    const setActiveTabSpy = jest.spyOn(mockContext, 'setActiveTab').mockImplementation((_: string) => undefined )
+    const setActiveTabSpy = jest
+      .spyOn(mockContext, 'setActiveTab')
+      .mockImplementation((_: string) => undefined);
     render(
-      <TabsContext.Provider
-        value={mockContext}
-      >
-        <Selector tabId={tabIdFixture} theme={DARK_THEME}>
+      <TabsContext.Provider value={mockContext}>
+        <Selector tabId={tabIdFixture} theme={AMBER_THEME}>
           {SELECTOR_CHILDREN}
         </Selector>
       </TabsContext.Provider>

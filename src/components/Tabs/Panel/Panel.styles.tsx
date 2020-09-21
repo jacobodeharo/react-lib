@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 const StyledPanel = styled.div`
-  background: #f1f1f1;
+  background: var(--c-button-bg, ${({ theme }) => theme.primaryColorText});
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 0 0 5px 5px;
 `;
 
 export { StyledPanel };

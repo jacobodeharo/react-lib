@@ -1,5 +1,5 @@
 import React from 'react';
-import { Anchor } from './Anchor';
+import { AnchorStyles } from './Anchor.styles';
 import { AnchorProps } from './Anchor.types';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { ThemeProvider } from '../theme';
@@ -7,7 +7,7 @@ import { availableThemes } from '../theme/variants';
 
 export default {
   title: 'Components/Base/Anchor',
-  component: Anchor,
+  component: AnchorStyles,
   argTypes: {
     label: { control: 'text' },
     themeName: {
@@ -28,7 +28,7 @@ const Template: Story<StoryButtonProps> = (args) => {
   const { label } = args;
   return (
     <ThemeProvider theme={availableThemes[args.themeName]}>
-      <Anchor>{label}</Anchor>
+      <AnchorStyles>{label}</AnchorStyles>
     </ThemeProvider>
   );
 };

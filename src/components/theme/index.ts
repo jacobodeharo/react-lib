@@ -1,2 +1,2 @@
-export * from './variants/lightTheme';
+export * from './variants/grayTheme';
 export * from './ThemeProvider';

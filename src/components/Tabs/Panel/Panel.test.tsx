@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, cleanup, screen } from '@testing-library/react';
 import { Panel } from './Panel';
-import { DARK_THEME } from '../../theme/variants/darkTheme';
+import { AMBER_THEME } from '../../theme/variants/amberTheme';
 import { consoleLogSpy } from '../../../helper/testHelper';
 import { ErrorBoundary } from '../../..';
 import { TabsContext } from '../Tabs.context';
@@ -45,7 +45,7 @@ describe('Panel', () => {
           setActiveTab: (_: string) => undefined,
         }}
       >
-        <Panel tabId='tabA' theme={DARK_THEME}>
+        <Panel tabId='tabA' theme={AMBER_THEME}>
           {PANEL_CHILDREN}
         </Panel>
       </TabsContext.Provider>

@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { render, cleanup, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { Button } from './Button';
-import { DARK_THEME } from '../theme/variants/darkTheme';
+import { ButtonStyles } from './Button.styles';
+import { AMBER_THEME } from '../theme/variants/amberTheme';
 import DoneCallback = jest.DoneCallback;
 
 describe('Button', () => {
@@ -12,21 +12,25 @@ describe('Button', () => {
   afterEach(cleanup);
 
   test('has to be rendered', () => {
-    render(<Button>Button Label</Button>);
+    render(<ButtonStyles>Button Label</ButtonStyles>);
     const buttonElement = screen.getByRole('button');
     expect(buttonElement).toBeInTheDocument();
     expect(buttonElement).toMatchSnapshot();
   });
 
   test('has to accept theming', () => {
-    render(<Button theme={DARK_THEME}>Button Label</Button>);
+    render(<ButtonStyles theme={AMBER_THEME}>Button Label</ButtonStyles>);
     const buttonElement = screen.getByRole('button');
     expect(buttonElement).toBeInTheDocument();
     expect(buttonElement).toMatchSnapshot();
   });
 
   test('has to handle onClick events', (done) => {
-    render(<Button onClick={clickEventHandler(done)}>{BUTTON_LABEL}</Button>);
+    render(
+      <ButtonStyles onClick={clickEventHandler(done)}>
+        {BUTTON_LABEL}
+      </ButtonStyles>
+    );
     userEvent.click(screen.getByText(BUTTON_LABEL));
   });
 });

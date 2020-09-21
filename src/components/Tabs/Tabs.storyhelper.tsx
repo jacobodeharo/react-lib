@@ -1,4 +1,4 @@
-import { Anchor, Button } from '../..';
+import { AnchorStyles, ButtonStyles } from '../..';
 import React from 'react';
 
 const renderPanelContentA = () => (
@@ -28,7 +28,7 @@ const renderPanelContentB = () => (
       amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
       incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
     </p>
-    <Button onClick={() => alert('It works!')}>Push me!</Button>
+    <ButtonStyles onClick={() => alert('It works!')}>Push me!</ButtonStyles>
   </article>
 );
 
@@ -47,9 +47,13 @@ const renderPanelContentC = () => (
       blandit. In et lorem eu lectus finibus fringilla quis at purus. Sed porta
       ac velit sit amet finibus.
     </p>
-    <Anchor href='http://google.com' rel='noopener noreferer' target='_blank'>
+    <AnchorStyles
+      href='http://google.com'
+      rel='noopener noreferer'
+      target='_blank'
+    >
       Press this link to search in Google
-    </Anchor>
+    </AnchorStyles>
   </article>
 );
 

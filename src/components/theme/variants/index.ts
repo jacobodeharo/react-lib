@@ -1,7 +1,7 @@
-import { LIGHT_THEME } from './lightTheme';
-import { DARK_THEME } from './darkTheme';
+import { GRAY_THEME } from './grayTheme';
+import { AMBER_THEME } from './amberTheme';
 
 export const availableThemes = {
-  light: LIGHT_THEME,
-  dark: DARK_THEME,
+  light: GRAY_THEME,
+  dark: AMBER_THEME,
 };

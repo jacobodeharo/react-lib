@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from './Button';
+import { ButtonStyles } from './Button.styles';
 import { ButtonProps } from './Button.types';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { ThemeProvider } from '../theme';
@@ -7,7 +7,7 @@ import { availableThemes } from '../theme/variants';
 
 export default {
   title: 'Components/Base/Button',
-  component: Button,
+  component: ButtonStyles,
   argTypes: {
     label: { control: 'text' },
     themeName: {
@@ -28,7 +28,7 @@ const Template: Story<StoryButtonProps> = (args) => {
   const { label } = args;
   return (
     <ThemeProvider theme={availableThemes[args.themeName]}>
-      <Button>{label}</Button>
+      <ButtonStyles>{label}</ButtonStyles>
     </ThemeProvider>
   );
 };

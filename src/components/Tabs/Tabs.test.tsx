@@ -1,12 +1,12 @@
 import React from 'react';
 import { render, cleanup, screen } from '@testing-library/react';
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from '@testing-library/react-hooks';
 import { Tabs } from './Tabs';
-import { DARK_THEME } from '../theme/variants/darkTheme';
-import { Selector } from "./Selector/Selector";
-import { Panel } from "./Panel/Panel";
-import { useTabs } from "./Tabs.hooks";
-import { TabsContext } from "./Tabs.context";
+import { AMBER_THEME } from '../theme/variants/amberTheme';
+import { Selector } from './Selector/Selector';
+import { Panel } from './Panel/Panel';
+import { useTabs } from './Tabs.hooks';
+import { TabsContext } from './Tabs.context';
 
 describe('Tabs', () => {
   const PANEL_CHILDREN = 'Panel Label';
@@ -29,7 +29,7 @@ describe('Tabs', () => {
 
   test('has to accept theming', () => {
     render(
-      <Tabs selectedTab='tabA' theme={DARK_THEME}>
+      <Tabs selectedTab='tabA' theme={AMBER_THEME}>
         <Selector tabId='tabA'>{SELECTOR_CHILDREN}</Selector>
         <Panel tabId='tabA'>{PANEL_CHILDREN}</Panel>
       </Tabs>
@@ -41,20 +41,20 @@ describe('Tabs', () => {
 });
 
 describe('useTabs hook', () => {
-
   test('has to create a TabsContext', () => {
     const setActiveTabMock = () => undefined;
     const context = renderHook(() => useTabs(), {
-      initialProps: { value: { activeTab: 'TabA', setActiveTab: setActiveTabMock }},
+      initialProps: {
+        value: { activeTab: 'TabA', setActiveTab: setActiveTabMock },
+      },
       wrapper: TabsContext.Provider,
     });
     expect(context.result).toStrictEqual({
       current: {
         activeTab: 'TabA',
-        setActiveTab: setActiveTabMock
+        setActiveTab: setActiveTabMock,
       },
-      error: undefined
+      error: undefined,
     });
   });
-
 });

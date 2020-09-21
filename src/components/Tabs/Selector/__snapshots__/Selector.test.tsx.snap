@@ -2,7 +2,7 @@
 
 exports[`Selector has to accept theming 1`] = `
 <div
-  class="sc-bdnylx dGbbwj"
+  class="sc-bdnylx ceNXxQ"
 >
   Selector Label
 </div>
@@ -10,7 +10,7 @@ exports[`Selector has to accept theming 1`] = `
 
 exports[`Selector has to be rendered 1`] = `
 <div
-  class="sc-bdnylx dGbbwj"
+  class="sc-bdnylx Dtgew"
 >
   Selector Label
 </div>
