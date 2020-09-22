@@ -1,20 +1,4 @@
-# NPM
 node_modules/
-
-# misc
-.DS_Store
-
-# IDE
-.idea/
-
-# App
 build/
 dist/
-/storybook-static/
-
-# Logs
-*.log
-
-# Coverage reports
-/coverage/
-/test-coverage/
+.idea/
