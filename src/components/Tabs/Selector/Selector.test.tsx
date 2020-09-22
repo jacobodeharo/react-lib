@@ -3,7 +3,7 @@ import { render, cleanup, screen } from '@testing-library/react';
 import { Selector } from './Selector';
 import { AMBER_THEME } from '../../theme/variants/amberTheme';
 import { consoleLogSpy } from '../../../helper/testHelper';
-import { ErrorBoundary } from '../../..';
+import { ErrorBoundary } from '../../../core/ErrorBoundary/ErrorBoundary';
 import { TabsContext } from '../Tabs.context';
 
 describe('Selector', () => {

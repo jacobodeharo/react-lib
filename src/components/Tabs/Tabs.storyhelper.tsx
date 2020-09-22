@@ -1,8 +1,9 @@
-import { AnchorStyles, ButtonStyles } from '../..';
 import React from 'react';
+import { ButtonStyles } from '../Button/Button.styles';
+import { AnchorStyles } from '../Anchor/Anchor.styles';
 
-const renderPanelContentA = () => (
-  <article>
+const RenderPanelContentA = (textColor: string) => (
+  <article style={{ color: textColor }}>
     <h4>Tab A</h4>
     <p>
       Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
@@ -14,8 +15,8 @@ const renderPanelContentA = () => (
   </article>
 );
 
-const renderPanelContentB = () => (
-  <article>
+const RenderPanelContentB = (textColor: string) => (
+  <article style={{ color: textColor }}>
     <h4>Tab B</h4>
     <p>
       Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
@@ -32,8 +33,8 @@ const renderPanelContentB = () => (
   </article>
 );
 
-const renderPanelContentC = () => (
-  <article>
+const RenderPanelContentC = (textColor: string) => (
+  <article style={{ color: textColor }}>
     <h4>Tab C</h4>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id
@@ -57,4 +58,4 @@ const renderPanelContentC = () => (
   </article>
 );
 
-export { renderPanelContentA, renderPanelContentB, renderPanelContentC };
+export { RenderPanelContentA, RenderPanelContentB, RenderPanelContentC };

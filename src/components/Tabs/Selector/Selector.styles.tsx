@@ -3,7 +3,8 @@ import { SelectorProps } from './Selector.types';
 
 const getBgColor = (active: boolean, hovered: boolean) =>
   active
-    ? css`var(--c-selector-bg-active, ${({ theme }) => theme.primaryColorText})`
+    ? css`var(--c-selector-bg-active, ${({ theme }) =>
+        theme.primaryColorLight})`
     : hovered
     ? css`var(--c-selector-bg-hover, ${({ theme }) => theme.primaryColor})`
     : css`var(--c-selector-bg, ${({ theme }) => theme.primaryColorDark})`;

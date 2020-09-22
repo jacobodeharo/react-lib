@@ -8,9 +8,9 @@ import { TabsProps } from './Tabs.types';
 import { Selector } from './Selector/Selector';
 import { Panel } from './Panel/Panel';
 import {
-  renderPanelContentA,
-  renderPanelContentB,
-  renderPanelContentC,
+  RenderPanelContentA,
+  RenderPanelContentB,
+  RenderPanelContentC,
 } from './Tabs.storyhelper';
 
 export default {
@@ -31,15 +31,16 @@ type StoryTabsProps = TabsProps & {
 };
 
 const Template: Story<StoryTabsProps> = (args) => {
+  const themeTextcolor = availableThemes[args.themeName].primaryTextColor;
   return (
     <ThemeProvider theme={availableThemes[args.themeName]}>
       <Tabs selectedTab='Tab A'>
         <Selector tabId='Tab A'>Tab A</Selector>
         <Selector tabId='Tab B'>Tab B</Selector>
         <Selector tabId='Tab C'>Tab C</Selector>
-        <Panel tabId='Tab A'>{renderPanelContentA()}</Panel>
-        <Panel tabId='Tab B'>{renderPanelContentB()}</Panel>
-        <Panel tabId='Tab C'>{renderPanelContentC()}</Panel>
+        <Panel tabId='Tab A'>{RenderPanelContentA(themeTextcolor)}</Panel>
+        <Panel tabId='Tab B'>{RenderPanelContentB(themeTextcolor)}</Panel>
+        <Panel tabId='Tab C'>{RenderPanelContentC(themeTextcolor)}</Panel>
       </Tabs>
     </ThemeProvider>
   );
@@ -47,5 +48,5 @@ const Template: Story<StoryTabsProps> = (args) => {
 
 export const Primary = Template.bind({});
 Primary.args = {
-  themeName: 'light',
+  themeName: 'gray',
 };

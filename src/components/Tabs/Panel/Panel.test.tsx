@@ -3,7 +3,7 @@ import { render, cleanup, screen } from '@testing-library/react';
 import { Panel } from './Panel';
 import { AMBER_THEME } from '../../theme/variants/amberTheme';
 import { consoleLogSpy } from '../../../helper/testHelper';
-import { ErrorBoundary } from '../../..';
+import { ErrorBoundary } from '../../../core/ErrorBoundary/ErrorBoundary';
 import { TabsContext } from '../Tabs.context';
 
 describe('Panel', () => {
