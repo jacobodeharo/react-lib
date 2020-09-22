@@ -30,7 +30,12 @@
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook -s public",
     "storybook:serve": "./node_modules/.bin/http-server -a localhost -p 8000 -c-1 ./storybook-static",
-    "storybook:deploy": "gh-pages -d storybook-static"
+    "storybook:deploy": "./node_modules/.bin/gh-pages -d storybook-static",
+    "storybook:deploy:ci": "./node_modules/.bin/storybook-to-ghpages -o=storybook-static --ci",
+    "publish:npm": "npm publish",
+    "publish:patch": "run-s bump:patch publish:npm",
+    "publish:minor": "run-s bump:minor publish:npm",
+    "publish:mayor": "run-s bump:mayor publish:npm"
   },
   "source": "index.ts",
   "peerDependencies": {
