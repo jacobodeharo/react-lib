@@ -1,9 +1,12 @@
 {
-  "name": "react-lib",
-  "version": "1.0.0",
+  "name": "@jacobodeharo/react-lib",
+  "version": "0.0.1",
   "description": "React component library",
+  "author": "Jacobo de Haro",
+  "license": "UNLICENSED",
   "main": "build/index.js",
   "module": "build/index.esm.js",
+  "homepage": "/jhh-react-library",
   "scripts": {
     "build": "rollup -c",
     "pretty:fix": "prettier --write './**/*.{js,jsx,mjs,ts,tsx,css,scss,md,html}'",
@@ -16,16 +19,18 @@
     "test:unit:watch": "jest --watch",
     "test": "run-s test:lint:fix test:unit",
     "build:link": "npm run build && cd build && npm link --prod",
+    "bump:patch": "npm version patch --force",
+    "bump:minor": "npm version minor --force",
+    "bump:mayor": "npm version mayor --force",
     "clean": "npm run clean:build",
     "clean:build": "rm -rf ./build && rm -rf coverage",
     "clean:npm": "rm -rf ./node_modules && npm cache verify",
     "clean:all": "cli-confirm \"Removing node_modules and build directories... Proceed? (y/n)\" && run-s clean:build clean:npm",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -s public",
+    "deploy": "gh-pages -d example/build"
   },
   "source": "index.ts",
-  "author": "Jacobo de Haro",
-  "license": "UNLICENSED",
   "peerDependencies": {
     "react": "16.13.1",
     "react-dom": "16.13.1",
@@ -40,6 +45,7 @@
     "@storybook/addon-essentials": "6.1.0-alpha.12",
     "@storybook/addon-links": "6.1.0-alpha.12",
     "@storybook/react": "6.1.0-alpha.12",
+    "@storybook/storybook-deployer": "^2.8.6",
     "@testing-library/dom": "7.24.2",
     "@testing-library/jest-dom": "5.11.4",
     "@testing-library/react": "11.0.4",
@@ -93,7 +99,8 @@
     "ts-loader": "8.0.4",
     "typescript": "4.0.3",
     "typescript-plugin-styled-components": "1.4.4",
-    "utility-types": "3.10.0"
+    "utility-types": "3.10.0",
+    "gh-pages": "~2.2.0"
   },
   "files": [
     "build"
@@ -105,5 +112,10 @@
   },
   "engines": {
     "node": ">=12"
+  },
+  "storybook-deployer": {
+    "gitUsername": "Jacobo de Haro",
+    "gitEmail": "jacobodeharo@gmail.com",
+    "commitMessage": "Deploy Storybook [skip ci]"
   }
 }
