@@ -2,7 +2,7 @@
 
 exports[`Panel has to accept theming 1`] = `
 <div
-  class="sc-bdnylx fLeSEx"
+  class="sc-bdnylx cFAyRC"
 >
   Panel Label
 </div>
@@ -10,7 +10,7 @@ exports[`Panel has to accept theming 1`] = `
 
 exports[`Panel has to be rendered 1`] = `
 <div
-  class="sc-bdnylx fLeSEx"
+  class="sc-bdnylx cFAyRC"
 >
   Panel Label
 </div>

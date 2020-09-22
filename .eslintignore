@@ -4,5 +4,6 @@ lib/
 node_modules/
 coverage/
 test-coverage/
+storybook-static/
 *.snap
 *.min.js
