@@ -13,6 +13,7 @@
     "pretty:check": "prettier --check './**/*.{js,jsx,mjs,ts,tsx,css,scss,md,html}'",
     "test:lint": "eslint --ext .jsx,.js,.ts,.tsx .",
     "test:lint:fix": "eslint --fix --ext .jsx,.js,.ts,.tsx .",
+    "test:lint:ci": "eslint --quiet --ext .jsx,.js,.ts,.tsx .",
     "test:unit": "jest",
     "test:unit:coverage": "jest --collectCoverage",
     "test:snapshots": "jest --update-snapshot --detectOpenHandles",
@@ -27,8 +28,9 @@
     "clean:npm": "rm -rf ./node_modules && npm cache verify",
     "clean:all": "cli-confirm \"Removing node_modules and build directories... Proceed? (y/n)\" && run-s clean:build clean:npm",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -s public",
-    "deploy": "gh-pages -d example/build"
+    "storybook:build": "build-storybook -s public",
+    "storybook:serve": "./node_modules/.bin/http-server -a localhost -p 8000 -c-1 ./storybook-static",
+    "storybook:deploy": "gh-pages -d storybook-static"
   },
   "source": "index.ts",
   "peerDependencies": {
@@ -75,6 +77,8 @@
     "eslint-plugin-react": "7.20.6",
     "eslint-plugin-react-hooks": "4.1.2",
     "eslint-plugin-standard": "4.0.1",
+    "gh-pages": "~2.2.0",
+    "http-server": "^0.12.3",
     "husky": "4.3.0",
     "identity-obj-proxy": "3.0.0",
     "jest": "26.4.2",
@@ -99,8 +103,7 @@
     "ts-loader": "8.0.4",
     "typescript": "4.0.3",
     "typescript-plugin-styled-components": "1.4.4",
-    "utility-types": "3.10.0",
-    "gh-pages": "~2.2.0"
+    "utility-types": "3.10.0"
   },
   "files": [
     "build"
