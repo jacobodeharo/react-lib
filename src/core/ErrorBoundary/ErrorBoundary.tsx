@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { ErrorBoundaryProps, ErrorBoundaryState } from './ErrorBoundary.types';
 
 export class ErrorBoundary extends React.PureComponent<
