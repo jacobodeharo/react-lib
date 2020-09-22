@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Selector has to accept theming 1`] = `
+<div
+  class="sc-bdnylx fMHcXs"
+>
+  Selector Label
+</div>
+`;
+
+exports[`Selector has to be rendered 1`] = `
+<div
+  class="sc-bdnylx Dtgew"
+>
+  Selector Label
+</div>
+`;

@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Anchor has to be rendered 1`] = `
+.c0 {
+  color: var(--c-anchor-text,);
+  -webkit-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
+  outline: none;
+}
+
+.c0:hover {
+  color: var(--c-anchor-text-hover,);
+  cursor: pointer;
+}
+
+<a
+  class="c0"
+  href="https://www.test.com"
+  rel="noopener noreferer"
+  target="_blank"
+>
+  Anchor Label
+</a>
+`;
+
+exports[`Anchor has to be rendered with proper styles by using a theme 1`] = `
+.c0 {
+  color: var(--c-anchor-text,#212121);
+  -webkit-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
+  outline: none;
+}
+
+.c0:hover {
+  color: var(--c-anchor-text-hover,#FFA000);
+  cursor: pointer;
+}
+
+<a
+  class="c0"
+  href="https://www.test.com"
+  rel="noopener noreferer"
+  target="_blank"
+>
+  Anchor Label
+</a>
+`;
