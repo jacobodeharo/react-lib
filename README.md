@@ -4,7 +4,7 @@ This is a project created as demo about how to create a React component library 
 
 ## React component library
 
-This prerelease **0.0.1** includes the following:
+This prerelease **0.0.2** includes the following:
 
 - **Rollup bundler** to generate the library bundle.
 - **Components** (Styled components):
@@ -34,7 +34,7 @@ npm install
 npm run storybook
 ```
 
-## How to launch unit tests?
+## How to run unit tests?
 
 This project comes with Jest test runner and `react-testing-library`. To tun the unit and snapshot tests,
 you have to execute:
