@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Panel has to accept theming 1`] = `
+<div
+  class="sc-bdnylx cFAyRC"
+>
+  Panel Label
+</div>
+`;
+
+exports[`Panel has to be rendered 1`] = `
+<div
+  class="sc-bdnylx cFAyRC"
+>
+  Panel Label
+</div>
+`;

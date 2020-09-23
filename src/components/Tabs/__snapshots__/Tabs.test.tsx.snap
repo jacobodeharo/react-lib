@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs has to accept theming 1`] = `
+<div
+  class="sc-bdnylx Dtgew"
+>
+  SelectorLabel
+</div>
+`;
+
+exports[`Tabs has to be rendered 1`] = `
+<div
+  class="sc-bdnylx Dtgew"
+>
+  SelectorLabel
+</div>
+`;

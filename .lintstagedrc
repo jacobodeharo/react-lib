@@ -1,0 +1,4 @@
+{
+    "*.{js,jsx,mjs,ts,tsx}": "eslint --fix --ext ",
+    "*.{scss,css,md,mdx,html,json}": "pretty-quick --staged"
+}

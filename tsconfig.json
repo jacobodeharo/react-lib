@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "declarationDir": "build",
+    "esModuleInterop": true,
+    "jsx": "react",
+    "lib": ["dom", "esNext"],
+    "module": "esNext",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "target": "es6",
+    "rootDir": "src"
+  },
+  "include": [
+    "src/**/*",
+    "typings/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "build"
+  ]
+}
