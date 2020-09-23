@@ -1,10 +1,12 @@
-# react-lib
+[![GitHub version](https://badge.fury.io/gh/jacobodeharo%2Freact-lib.svg)](https://badge.fury.io/gh/jacobodeharo%2Freact-lib)
 
-This is a project created as demo about how to create a React component library supporting theme customisation.
+This is a project created as a demo about how to create a basic React Component library supporting theme customisation.
+
+This is the current components available in the live Storybook: https://jacobodeharo.github.io/react-lib/?path=/story/components-base-anchor--primary
 
 ## React component library
 
-This prerelease **0.0.2** includes the following:
+Currently implemented on this library:
 
 - **Rollup bundler** to generate the library bundle.
 - **Components** (Styled components):
@@ -48,6 +50,7 @@ npm run test
 ```
 npm run build
 ```
+
 
 This command will bundle the library by using Rollup into a `build` folder.
 
