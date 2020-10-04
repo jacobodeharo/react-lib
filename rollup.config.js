@@ -13,17 +13,10 @@ const lazyloadedComponents = ['Button', 'Anchor'];
 export default {
   input: 'src/index.ts',
   output: [
-    // {
-    //   // file: packageJson.main,
-    //   dir: 'build',
-    //   format: 'cjs',
-    //   // sourcemap: true,
-    // },
     {
-      // file: packageJson.module,
       dir: 'build',
       format: 'esm',
-      // sourcemap: true,
+      sourcemap: true,
     },
   ],
   manualChunks: (id, { getModuleInfo, getModuleIds }) => {
@@ -65,7 +58,7 @@ export default {
   plugins: [
     peerDepsExternal(),
     resolve(),
-    // commonjs(),
+    commonjs(),
     typescript({
       useTsconfigDeclarationDir: true,
       transformers: [
