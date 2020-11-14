@@ -1,12 +1,12 @@
 import React from 'react';
-import { AnchorStyles } from './Anchor.styles';
-import { AnchorProps } from './Anchor.types';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { ThemeProvider } from '../theme';
-import { availableThemes } from '../theme/variants';
+import { availableThemes, ThemeID } from '../theme/variants';
+import { AnchorStyles } from './Anchor.styles';
+import { AnchorProps } from './Anchor.types';
 
 export default {
-  title: 'Components/Base/Anchor',
+  title: '@/components/Base/Anchor',
   component: AnchorStyles,
   argTypes: {
     label: { control: 'text' },
@@ -27,7 +27,7 @@ type StoryButtonProps = AnchorProps & {
 const Template: Story<StoryButtonProps> = (args) => {
   const { label } = args;
   return (
-    <ThemeProvider theme={availableThemes[args.themeName]}>
+    <ThemeProvider theme={availableThemes[args.themeName as ThemeID]}>
       <AnchorStyles>{label}</AnchorStyles>
     </ThemeProvider>
   );

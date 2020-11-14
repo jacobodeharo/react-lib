@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { ThemeProvider } from '../theme';
-import { availableThemes } from '../theme/variants';
+import { availableThemes, ThemeID } from '../theme/variants';
 import { Tabs } from './Tabs';
 import { TabsProps } from './Tabs.types';
 
@@ -14,7 +14,7 @@ import {
 } from './Tabs.storyhelper';
 
 export default {
-  title: 'Components/Containers/Tabs',
+  title: '@/components/Containers/Tabs',
   component: Tabs,
   argTypes: {
     themeName: {
@@ -31,9 +31,10 @@ type StoryTabsProps = TabsProps & {
 };
 
 const Template: Story<StoryTabsProps> = (args) => {
-  const themeTextcolor = availableThemes[args.themeName].primaryTextColor;
+  const themeTextcolor =
+    availableThemes[args.themeName as ThemeID].primaryTextColor;
   return (
-    <ThemeProvider theme={availableThemes[args.themeName]}>
+    <ThemeProvider theme={availableThemes[args.themeName as ThemeID]}>
       <Tabs selectedTab='Tab A'>
         <Selector tabId='Tab A'>Tab A</Selector>
         <Selector tabId='Tab B'>Tab B</Selector>

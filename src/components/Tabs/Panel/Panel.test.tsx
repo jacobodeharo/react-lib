@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, cleanup, screen } from '@testing-library/react';
-import { Panel } from './Panel';
 import { AMBER_THEME } from '../../theme/variants/amberTheme';
-import { consoleLogSpy } from '../../../helper/testHelper';
-import { ErrorBoundary } from '../../../core/ErrorBoundary/ErrorBoundary';
+import { consoleLogSpy } from '@/helper/testHelper';
+import { ErrorBoundary } from '@/core/ErrorBoundary/ErrorBoundary';
 import { TabsContext } from '../Tabs.context';
+import { Panel } from './Panel';
 
 describe('Panel', () => {
   const PANEL_CHILDREN = 'Panel Label';
@@ -15,7 +15,7 @@ describe('Panel', () => {
       <TabsContext.Provider
         value={{
           activeTab: 'tabA',
-          setActiveTab: (_: string) => undefined,
+          setActiveTab: (): void => undefined,
         }}
       >
         <Panel tabId='tabA'>{PANEL_CHILDREN}</Panel>
@@ -42,7 +42,7 @@ describe('Panel', () => {
       <TabsContext.Provider
         value={{
           activeTab: 'tabA',
-          setActiveTab: (_: string) => undefined,
+          setActiveTab: (): void => undefined,
         }}
       >
         <Panel tabId='tabA' theme={AMBER_THEME}>

@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { SelectorProps } from './Selector.types';
 
-const getBgColor = (active: boolean, hovered: boolean) =>
+const getBgColor = (active: boolean = false, hovered: boolean = false) =>
   active
     ? css`var(--c-selector-bg-active, ${({ theme }) =>
         theme.primaryColorLight})`
@@ -9,7 +9,7 @@ const getBgColor = (active: boolean, hovered: boolean) =>
     ? css`var(--c-selector-bg-hover, ${({ theme }) => theme.primaryColor})`
     : css`var(--c-selector-bg, ${({ theme }) => theme.primaryColorDark})`;
 
-const getFgColor = (active: boolean, hovered: boolean) =>
+const getFgColor = (active: boolean = false, hovered: boolean = false) =>
   active
     ? css`var(--c-selector-fg-active, ${({ theme }) => theme.primaryTextColor})`
     : hovered

@@ -1,12 +1,12 @@
 import React from 'react';
-import { ButtonStyles } from './Button.styles';
-import { ButtonProps } from './Button.types';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { ThemeProvider } from '../theme';
-import { availableThemes } from '../theme/variants';
+import { availableThemes, ThemeID } from '../theme/variants';
+import { ButtonStyles } from './Button.styles';
+import { ButtonProps } from './Button.types';
 
 export default {
-  title: 'Components/Base/Button',
+  title: '@/components/Base/Button',
   component: ButtonStyles,
   argTypes: {
     label: { control: 'text' },
@@ -27,7 +27,7 @@ type StoryButtonProps = ButtonProps & {
 const Template: Story<StoryButtonProps> = (args) => {
   const { label } = args;
   return (
-    <ThemeProvider theme={availableThemes[args.themeName]}>
+    <ThemeProvider theme={availableThemes[args.themeName as ThemeID]}>
       <ButtonStyles>{label}</ButtonStyles>
     </ThemeProvider>
   );

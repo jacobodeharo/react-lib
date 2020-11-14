@@ -1,4 +1,4 @@
-import { Theme } from '../../theme/theme.types';
+import { Theme } from '@/components/theme';
 
 export type PanelProps = {
   tabId: string;
