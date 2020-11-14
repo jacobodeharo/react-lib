@@ -9,7 +9,7 @@ export class ErrorBoundary extends React.PureComponent<
 
   constructor(props: Readonly<ErrorBoundaryProps>) {
     super(props);
-    this.state = { hasError: false, error: null };
+    this.state = { hasError: false };
   }
 
   componentDidCatch(error: any) {

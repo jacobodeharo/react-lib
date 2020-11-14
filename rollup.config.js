@@ -19,7 +19,7 @@ export default {
       sourcemap: true,
     },
   ],
-  manualChunks: (id, { getModuleInfo, getModuleIds }) => {
+  manualChunks: (id, { getModuleInfo }) => {
     const regExp = new RegExp(
       `/components/.*/(${lazyloadedComponents.join('|')})`
     );

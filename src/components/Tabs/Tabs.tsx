@@ -1,9 +1,9 @@
 import * as React from 'react';
+import { renderChildrenOfType } from '@/helper/reactDomUtils';
 import { TabsProps } from './Tabs.types';
 import { TabsContext } from './Tabs.context';
 import { Selector } from './Selector/Selector';
 import { Panel } from './Panel/Panel';
-import { renderChildrenOfType } from '../../helper/reactDomUtils';
 import { TabsBody, TabsHeader, TabsWrapper } from './Tabs.styles';
 
 const Tabs: React.FC<TabsProps> = (props) => {

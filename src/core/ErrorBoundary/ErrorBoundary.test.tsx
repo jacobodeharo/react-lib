@@ -1,7 +1,7 @@
 import { ErrorBoundary } from './ErrorBoundary';
 import React from 'react';
 import { render, cleanup, screen } from '@testing-library/react';
-import { consoleLogSpy } from '../../helper/testHelper';
+import { consoleLogSpy } from '@/helper/testHelper';
 
 describe('ErrorBoundary', () => {
   const ThrowError = () => {

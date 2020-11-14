@@ -1,5 +1,7 @@
 const path = require('path');
 
+const MAX_ASSET_SIZE = 1024 * 1024;
+
 module.exports = {
   stories: [
     '../src/components/**/*.stories.mdx',
@@ -17,6 +19,24 @@ module.exports = {
       use: ['style-loader', 'css-loader', 'sass-loader'],
       include: path.resolve(__dirname, '../'),
     });
+
+    config.resolve.alias['@'] = path.resolve(__dirname, '../src/');
+
+    config.optimization = {
+      ...config.optimization,
+      ...{
+        splitChunks: {
+          chunks: 'all',
+          minSize: 0,
+          maxSize: MAX_ASSET_SIZE,
+        },
+      },
+    };
+
+    config.performance = {
+      maxAssetSize: MAX_ASSET_SIZE,
+      // hints: false
+    };
 
     // Return the altered config
     return config;

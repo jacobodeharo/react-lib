@@ -1,7 +1,8 @@
-import { Theme } from '../../theme/theme.types';
+import { Theme } from '@/components/theme';
 
 export type SelectorProps = {
   tabId: string;
   active?: boolean;
+  hovered?: boolean;
   theme?: Theme;
 };

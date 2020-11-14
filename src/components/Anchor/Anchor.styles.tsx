@@ -1,6 +1,5 @@
-import React from 'react';
-import { AnchorProps } from './Anchor.types';
 import styled from 'styled-components';
+import { AnchorProps } from './Anchor.types';
 
 const AnchorStyles = styled.a<AnchorProps>`
   color: var(--c-anchor-text, ${({ theme }) => theme.primaryTextColor});

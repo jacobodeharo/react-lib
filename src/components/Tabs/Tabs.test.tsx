@@ -42,7 +42,7 @@ describe('Tabs', () => {
 
 describe('useTabs hook', () => {
   test('has to create a TabsContext', () => {
-    const setActiveTabMock = () => undefined;
+    const setActiveTabMock = (): void => undefined;
     const context = renderHook(() => useTabs(), {
       initialProps: {
         value: { activeTab: 'TabA', setActiveTab: setActiveTabMock },

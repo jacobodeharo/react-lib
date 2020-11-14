@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, cleanup, screen } from '@testing-library/react';
-import { Selector } from './Selector';
 import { AMBER_THEME } from '../../theme/variants/amberTheme';
-import { consoleLogSpy } from '../../../helper/testHelper';
-import { ErrorBoundary } from '../../../core/ErrorBoundary/ErrorBoundary';
-import { TabsContext } from '../Tabs.context';
+import { consoleLogSpy } from '@/helper/testHelper';
+import { ErrorBoundary } from '@/core/ErrorBoundary/ErrorBoundary';
+import { TabsContext } from '@/components/Tabs/Tabs.context';
+import { Selector } from './Selector';
 
 describe('Selector', () => {
   const SELECTOR_CHILDREN = 'Selector Label';
@@ -15,7 +15,7 @@ describe('Selector', () => {
       <TabsContext.Provider
         value={{
           activeTab: 'tabA',
-          setActiveTab: (_: string) => undefined,
+          setActiveTab: (): void => undefined,
         }}
       >
         <Selector tabId='tabA'>{SELECTOR_CHILDREN}</Selector>
@@ -42,7 +42,7 @@ describe('Selector', () => {
       <TabsContext.Provider
         value={{
           activeTab: 'tabA',
-          setActiveTab: (_: string) => undefined,
+          setActiveTab: (): void => undefined,
         }}
       >
         <Selector tabId='tabA' theme={AMBER_THEME}>
@@ -58,12 +58,11 @@ describe('Selector', () => {
   test('has to change active tab when clicked', () => {
     const mockContext = {
       activeTab: 'tabA',
-      setActiveTab: (_: string) => undefined,
+      setActiveTab: (): void => undefined,
     };
     const tabIdFixture = 'tabA';
-    const setActiveTabSpy = jest
-      .spyOn(mockContext, 'setActiveTab')
-      .mockImplementation((_: string) => undefined);
+    const setActiveTabSpy = jest.spyOn(mockContext, 'setActiveTab');
+
     render(
       <TabsContext.Provider value={mockContext}>
         <Selector tabId={tabIdFixture} theme={AMBER_THEME}>

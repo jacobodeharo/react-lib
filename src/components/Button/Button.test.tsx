@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { render, cleanup, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { ButtonStyles } from './Button.styles';
 import { AMBER_THEME } from '../theme/variants/amberTheme';
+import { ButtonStyles } from './Button.styles';
 import DoneCallback = jest.DoneCallback;
 
 describe('Button', () => {

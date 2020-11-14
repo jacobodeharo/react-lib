@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "strict": true,
+    "strictFunctionTypes": false,
+    "strictBindCallApply": true,
+    "strictNullChecks": false,
+    "alwaysStrict": false,
     "allowSyntheticDefaultImports": true,
     "declaration": true,
     "declarationDir": "build",
@@ -10,14 +15,12 @@
     "moduleResolution": "node",
     "sourceMap": true,
     "target": "es6",
-    "rootDir": "src"
+    "rootDir": "src",
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"]
+    }
   },
-  "include": [
-    "src/**/*",
-    "typings/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "build"
-  ]
+  "include": ["src/**/*", "typings/**/*"],
+  "exclude": ["node_modules", "build"]
 }
