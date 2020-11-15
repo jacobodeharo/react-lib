@@ -6,8 +6,6 @@ import { ThemeProvider } from '@/components/theme';
 import { LazyButton } from '@/components/Button/Button.lazy';
 import { LazyAnchor } from '@/components/Anchor/Anchor.lazy';
 
-require('module-alias/register');
-
 export {
   ErrorBoundary,
   Tabs,

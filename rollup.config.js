@@ -3,6 +3,7 @@ import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
 import resolve from '@rollup/plugin-node-resolve';
 import typescript from 'rollup-plugin-typescript2';
+import { typescriptPaths } from 'rollup-plugin-typescript-paths';
 
 const createStyledComponentsTransformer = require('typescript-plugin-styled-components')
   .default;
@@ -66,6 +67,9 @@ export default {
           before: [styledComponentsTransformer],
         }),
       ],
+    }),
+    typescriptPaths({
+      absolute: true,
     }),
     postcss(),
   ],
