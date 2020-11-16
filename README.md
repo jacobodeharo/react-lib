@@ -1,4 +1,4 @@
-[![GitHub version](https://badge.fury.io/gh/jacobodeharo%2Freact-lib.svg)](https://badge.fury.io/gh/jacobodeharo%2Freact-lib)
+[![GitHub version](https://badge.fury.io/gh/jacobodeharo%2Freact-lib.svg)](https://badge.fury.io/gh/jacobodeharo%2Freact-lib&kill_cache=1)
 
 This is a project created as a demo about how to create a basic React Component library supporting theme customisation.
 
